@@ -1,0 +1,139 @@
+:root {
+  --color-primary: rgb(225, 246, 248);
+  --color-secondary: rgb(110, 157, 233);
+  --color-tertiary:rgb(21, 46, 234);
+  --color-quarternary: white;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2rem;
+}
+
+#root {
+  width: 600px;
+  height: 600px;
+  background-color: var(--color-quarternary);
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 7fr;
+  width: 100%;
+}
+
+.App header {
+  grid-column: 1/3;
+}
+  .title {
+    font-size: 3.5rem;
+    text-align: center;
+    margin: 2% auto;
+  }
+  .underline {
+    height: 0.25rem;
+    width: 10rem;
+    background: var(--color-tertiary);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3%;
+  }
+
+.App .companies {
+  padding-top: 3%;
+}
+  .companies button {
+    font-size: 1.5rem;
+    margin: 5% auto;
+    width: 100%;
+    border-top: transparent;
+    border-right: transparent;
+    border-bottom: transparent;
+    background-color: transparent;
+  }
+    .active {
+      color: var(--color-tertiary);
+      border-top: transparent;
+      border-right: transparent;
+      border-bottom: transparent;
+      border-left: solid var(--color-tertiary) 4px;
+    }
+
+.App .jobs {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+  .jobs h1 {
+    font-size: 2.5rem;
+  }
+  .jobs .dates {
+    font-size: 2rem;
+  }
+  .jobs .duties {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+    .duties .icon {
+      font-size: 1.5rem;
+      margin: 0;
+      margin-top: 19%;
+      color: var(--color-tertiary);
+    }
+    .duties p {
+      text-align: justify;
+      hyphens: auto;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      margin: 0;
+      margin-left: 2%;
+      margin-bottom: 5%;
+    }
+
+
+
+
+@media (max-width: 1024px) {
+  #root {
+    width: 560px;
+    height: 560px;
+  }
+
+  html {
+    font-size: 7px;
+  }
+}
+@media (max-width: 768px) {
+  #root {
+    width: 420px;
+    height: 420px;
+  }
+}
+@media (max-width: 576px) {
+  #root {
+    width: 350px;
+    height: 350px;
+  }
+
+  html {
+    font-size: 6px;
+  }
+}
+@media (max-width: 425px) {
+  #root {
+    width: 240px;
+    height: 240px;
+  }
+
+  html {
+    font-size: 4px;
+  }
+}
